@@ -131,7 +131,7 @@ class ConronVirusSpider(object):
                 aa["provinceShortName"] = province["provinceShortName"]
             cities_virus.extend(cities_data)
             if province["provinceShortName"] == "山西":
-                province["provinceShortName"] = "三晋"
+                province["provinceShortName"] = "三ren"
 
             lp = lazy_pinyin(province["provinceShortName"])
 
