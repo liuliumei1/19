@@ -114,7 +114,7 @@ class ConronVirusSpider(object):
             last_day_corona_virus = json.load(fp2)
         i = 1
         city_viurs = {}
-        for province in last_day_corona_virus:
+        for province in tqdm(last_day_corona_virus):
             statistics_data_url = province['statisticsData']
             cities_data = province["cities"]
             statistics_data_json_str = self.get_content_from_url(statistics_data_url)
