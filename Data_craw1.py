@@ -74,7 +74,7 @@ class ConronVirusSpider(object):
         data["curedIncr"] = int(curedIncr)
         chinesedata = []
         chinesedata.append(data)
-        self.save(chinesedata, 'venv/chinesedata.json')
+        self.save(chinesedata, './chinesedata.json')
 
 
     def get_content_from_url(self, url):
@@ -143,8 +143,8 @@ class ConronVirusSpider(object):
                     one_day["provinceShortName"] = lp[0] + lp[1] + lp[2]
             corona_virus.extend(statistics_data)
 
-        self.save(corona_virus, 'venv/corona_virus.json')
-        self.save(cities_virus, 'venv/cities_virus.json')
+        self.save(corona_virus, './corona_virus.json')
+        self.save(cities_virus, './cities_virus.json')
 
     def run(self):
         self.crawl_conron_virus()
